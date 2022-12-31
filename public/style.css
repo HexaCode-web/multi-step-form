@@ -301,7 +301,16 @@ li {
     height: fit-content;
     flex-direction: column;
   }
+  .item {
+    font-weight: bold;
+    flex-direction: column;
+    transform: translateY(98px);
+  }
+  .posInfo {
+    text-align: center;
+  }
   .sidebar {
+    min-height: 200px;
     gap: 10px;
     border-radius: 15px;
     flex-direction: row;
@@ -324,12 +333,14 @@ li {
   .box {
     height: 83%;
   }
+  .position {
+    margin-left: 8px;
+  }
 }
 @media only screen and (max-width: 700px) {
   .sidebar {
     font-size: 9px;
     flex-direction: row;
-    min-height: 200px;
   }
   .content {
     padding: 20px 19px;
