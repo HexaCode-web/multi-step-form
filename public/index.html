@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="sidebar">
+        <div class="item">
+          <div class="position active" id="1">1</div>
+          <div class="posInfo">
+            <span class="step">Step 1</span><br /><span class="formName"
+              >Your info</span
+            >
+          </div>
+        </div>
+        <div class="item">
+          <div class="position" id="2">2</div>
+          <div class="posInfo">
+            <span class="step">Step 2</span><br /><span class="formName"
+              >Select plan</span
+            >
+          </div>
+        </div>
+        <div class="item">
+          <div class="position" id="3">3</div>
+          <div class="posInfo">
+            <span class="step">Step 3</span><br /><span class="formName"
+              >Add-ons</span
+            >
+          </div>
+        </div>
+        <div class="item">
+          <div class="position" id="4">4</div>
+          <div class="posInfo">
+            <span class="step">Step 4</span><br /><span class="formName"
+              >Summary</span
+            >
+          </div>
+        </div>
+        <div class="item">
+          <div class="position" id="5">5</div>
+          <div class="posInfo">
+            <span class="step">Step 5</span><br /><span class="formName"
+              >congratulations!</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div id="one" class="form">
+          <div class="formInfo">
+            <h2 class="formTitle">Personal Info</h2>
+            <p class="formInfo">
+              Please provide your name, email address, and phone number
+            </p>
+          </div>
+          <form id="FirstForm">
+            <div class="formItem">
+              <label for="Name">Name:</label>
+              <input
+                type="text"
+                name="Name"
+                id="Name"
+                placeholder="e.g. Stephen King"
+                required
+              />
+            </div>
+            <div class="formItem">
+              <label for="Email">Email Address:</label>
+              <input
+                type="email"
+                name="Email"
+                id="Email"
+                placeholder="e.g. stephenking@lorem.com"
+                required
+              />
+            </div>
+            <div class="formItem">
+              <label for="Phone">Phone Number:</label>
+              <input
+                type="text"
+                name="Phone"
+                id="Phone"
+                placeholder="e.g. +1 234 567 890"
+                required
+              />
+            </div>
+            <input type="submit" value="Next Step" />
+          </form>
+        </div>
+        <div id="two" class="form hidden">
+          <div class="formInfo">
+            <h2 class="formTitle">Select your plan</h2>
+            <p class="formInfo">
+              You have the option of monthly or yearly billing.
+            </p>
+          </div>
+          <div class="options">
+            <div class="box">
+              <img src="assets/images/icon-arcade.svg" class="icon" />
+              <h3 class="title">Arcade</h3>
+              <p class="price">$90/yr</p>
+              <p class="offer">2 months free</p>
+            </div>
+            <div class="box">
+              <img src="assets/images/icon-advanced.svg" class="icon" />
+              <h3 class="title">Advanced</h3>
+              <p class="price">$120/yr</p>
+              <p class="offer">2 months free</p>
+            </div>
+            <div class="box">
+              <img src="assets/images/icon-pro.svg" class="icon" />
+              <h3 class="title">Pro</h3>
+              <p class="price">$150/yr</p>
+              <p class="offer">2 months free</p>
+            </div>
+          </div>
+          <div class="nav">
+            <button class="back">Go Back</button>
+            <button class="Next">Next Step</button>
+          </div>
+        </div>
+        <div id="three" class="form hidden">
+          <div class="formInfo">
+            <h2 class="formTitle">Pick add-on</h2>
+            <p class="formInfo">help enhance your gaming experience.</p>
+          </div>
+          <div class="form3-content">
+            <div class="form3-box" id="FirstAddon">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <div class="addonInfo">
+                <p>Online service</p>
+                <p>Access to multiplayer games</p>
+              </div>
+              <div class="addonPrice"><p>+$10/yr</p></div>
+            </div>
+            <div class="form3-box" id="SecondAddon">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <div class="addonInfo">
+                <p>Customizable Profile</p>
+                <p>Custom theme on your profile</p>
+              </div>
+              <div class="addonPrice"><p>+$20/yr</p></div>
+            </div>
+            <div class="form3-box" id="ThirdAddon">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <div class="addonInfo">
+                <p>Larger storage</p>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+              <div class="addonPrice"><p>+$20/yr</p></div>
+            </div>
+          </div>
+          <div class="nav">
+            <button class="back">Go Back</button>
+            <button class="Next">Next Step</button>
+          </div>
+        </div>
+        <div id="four" class="form hidden">
+          <div class="formInfo">
+            <h2 class="formTitle">Finishing up</h2>
+            <p class="formInfo">
+              Double-check everything looks OK before confirming.
+            </p>
+          </div>
+          <div class="invoice">
+            <div class="PlanResult" id="PlanResult">
+              <span class="Name"></span><span class="Price"></span>
+            </div>
+            <ul class="AddOnResult" id="AddOnResult"></ul>
+            <div class="Total"></div>
+          </div>
+          <div class="nav">
+            <button class="back">Go Back</button>
+            <button class="Next">Confirm</button>
+          </div>
+        </div>
+        <div class="form hidden" id="five">
+          <img class="thank" src="assets/images/icon-thank-you.svg" />
+          <h4>Thank you!</h4>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

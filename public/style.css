@@ -1,0 +1,343 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 98vh;
+  background-color: #eef5ff;
+  font-family: "Ubuntu", sans-serif;
+}
+main {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  width: 70%;
+  height: 100%;
+  border-radius: 15px;
+}
+.sidebar {
+  background-repeat: no-repeat;
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
+  width: 25%;
+  height: 90%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+}
+.position {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.5s all;
+}
+.item .step {
+  opacity: 0.9;
+}
+.active {
+  background-color: #bfe0ff;
+  color: black;
+  border: none;
+  font-weight: bolder;
+}
+.item .formName {
+  font-weight: 500;
+}
+.content {
+  width: 100%;
+  padding: 20px 60px;
+}
+.content .formInfo .formTitle {
+  margin-bottom: 0;
+  color: #032b5c;
+}
+.content .formInfo .formInfo {
+  margin-top: 15px;
+  opacity: 0.6;
+}
+.form {
+  display: grid;
+  grid-template-rows: 15% 75% 10%;
+  animation: Slider 1s;
+}
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.31);
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+label {
+  color: #032b5c;
+  font-size: 0.9rem;
+}
+input[type="submit"],
+.Next {
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  width: 100px;
+  margin-left: auto;
+  background-color: #032b5c;
+  color: white;
+  border: none;
+  min-height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.back {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  opacity: 0.7;
+  width: 100px;
+  height: 40px;
+  font-size: 1rem;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.back:hover {
+  opacity: 1;
+}
+input[type="submit"]:hover,
+.Next:hover {
+  scale: 1.1;
+}
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.box {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 214px;
+  height: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+}
+.box h3,
+.box p {
+  margin: 5px;
+}
+
+.box img {
+  width: 48px;
+  margin-bottom: 50px;
+}
+.box:hover,
+.form3-box:hover {
+  scale: 1.05;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.box .price {
+  opacity: 0.5;
+}
+.selected {
+  background-color: #f8f9fe;
+  border: 2px solid #534c99;
+}
+.nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form3-content {
+  display: flex;
+  flex-direction: column;
+}
+.form3-box {
+  transition: 0.5s all;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 10% 80% 15%;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 15px;
+}
+.form-check-input {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 15px;
+}
+.invoice {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: column;
+  gap: 10px;
+}
+#four {
+  height: 100%;
+}
+.PlanResult {
+  border-radius: 15px;
+  height: 71px;
+  background-color: #f8f9fe;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #091f44;
+}
+.PlanResult .Price {
+  font-weight: bolder;
+}
+.PlanResult .Name {
+  font-weight: 500;
+}
+.sperator {
+  width: 70%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: rgb(182, 182, 182);
+}
+ul {
+  border-radius: 15px;
+  height: fit-content;
+  background-color: #f8f9fe;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000000b2;
+  margin-bottom: 0;
+}
+li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.Total {
+  border-radius: 15px;
+  background-color: #f8f9fe;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  width: 100%;
+}
+@keyframes Slider {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#five img {
+  margin-bottom: 20px;
+}
+#five {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+@media only screen and (max-width: 990px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .sidebar {
+    gap: 10px;
+    border-radius: 15px;
+    flex-direction: row;
+    width: 100%;
+    background-image: url(assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+  }
+  .options {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 23px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .nav {
+    width: 88%;
+  }
+  .box {
+    height: 83%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .sidebar {
+    font-size: 9px;
+    flex-direction: row;
+    min-height: 200px;
+  }
+  .content {
+    padding: 20px 19px;
+  }
+  .options {
+    width: 70%;
+  }
+  .nav {
+    width: 70%;
+  }
+}
